@@ -53,8 +53,16 @@ def build_google_maps_url(gpt_response):
         "dir_action": "navigate"
     }
 
+    waypoints = ""
     if via:
-        params["waypoints"] = via
+        waypoint_list = [place.strip() for place in via.split(",")]
+        waypoints = "|".join(waypoint_list)
+    if waypoints:
+        params["waypoints"] = waypoints
+
+    # Encode parameters
+    url = base_url + "&" + urllib.parse.urlencode(params)
+    return url
 
     # Encode parameters
     url = base_url + "&" + urllib.parse.urlencode(params)
