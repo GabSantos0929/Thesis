@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Send transcription to GPT
-def process_with_gpt(prompt, model_name="openai/gpt-3.5-turbo"):
+def process_with_gpt(prompt, model_name="openai/gpt-3.5-turbo"): # replace with your preferred model
     print("Sending to GPT via OpenRouter...")
     api_key = os.getenv("OPENROUTER_API_KEY")  # Make sure to set this in your environment
 
