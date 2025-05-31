@@ -4,7 +4,6 @@ import json
 import urllib.parse
 from asr_whisper import transcribe_audio as whisper_transcribe
 from asr_pocketsphinx import transcribe_audio as pocketsphinx_transcribe
-from asr_vosk import transcribe_audio as vosk_transcribe
 from dotenv import load_dotenv
 load_dotenv()
 
