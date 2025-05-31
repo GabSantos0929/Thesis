@@ -70,7 +70,7 @@ def is_json(text):
 
 if __name__ == "__main__":
     audio_path = "audio_files/sample_audio7.wav"  # replace with your audio file
-    transcript = vosk_transcribe(audio_path)
+    transcript = whisper_transcribe(audio_path)
     # transcript = "Can you take me to the airport using Skyway?" # enter your navigation prompts here
     print("Transcript:", transcript)
 
